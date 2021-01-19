@@ -1,4 +1,4 @@
-package com.atenta.cadastro.infraestrutura.configuracao;
+package br.com.cast.avaliacao.configuracao;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.NamingConventions;

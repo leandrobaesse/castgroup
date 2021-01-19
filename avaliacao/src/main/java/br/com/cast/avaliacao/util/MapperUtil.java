@@ -1,4 +1,4 @@
-package com.atenta.cadastro.infraestrutura.util;
+package br.com.cast.avaliacao.util;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;

@@ -1,15 +1,15 @@
 package br.com.cast.avaliacao.exception;
 
-public class CozinhaNaoEncontradaException extends EntidadeNaoEncontradaException {
+public class CursoNaoEncontradoException extends EntidadeNaoEncontradaException {
 
 	private static final long serialVersionUID = 1L;
 
-	public CozinhaNaoEncontradaException(String mensagem) {
+	public CursoNaoEncontradoException(String mensagem) {
 		super(mensagem);
 	}
 	
-	public CozinhaNaoEncontradaException(Long cozinhaId) {
-		this(String.format("Não existe um cadastro de cozinha com código %d", cozinhaId));
+	public CursoNaoEncontradoException(Long cursoId) {
+		this(String.format("Não existe um cadastro de curso com código %d", cursoId));
 	}
 	
 }

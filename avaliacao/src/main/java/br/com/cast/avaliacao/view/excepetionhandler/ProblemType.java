@@ -1,4 +1,4 @@
-package com.atenta.cadastro.visao.exceptionhandler;
+package br.com.cast.avaliacao.view.excepetionhandler;
 
 import lombok.Getter;
 
@@ -17,7 +17,7 @@ public enum ProblemType {
 	private String uri;
 	
 	ProblemType(String path, String title) {
-		this.uri = "https://atentatecnologia.com.br" + path;
+		this.uri = "https://castgroup.com.br" + path;
 		this.title = title;
 	}
 	

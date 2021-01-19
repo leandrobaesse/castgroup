@@ -1,8 +1,8 @@
-package com.atenta.cadastro.visao.exceptionhandler;
+package br.com.cast.avaliacao.view.excepetionhandler;
 
-import com.atenta.cadastro.dominio.modelo.exception.EntidadeEmUsoException;
-import com.atenta.cadastro.dominio.modelo.exception.EntidadeNaoEncontradaException;
-import com.atenta.cadastro.dominio.modelo.exception.NegocioException;
+import br.com.cast.avaliacao.exception.EntidadeEmUsoException;
+import br.com.cast.avaliacao.exception.EntidadeNaoEncontradaException;
+import br.com.cast.avaliacao.exception.NegocioException;
 import com.fasterxml.jackson.databind.JsonMappingException.Reference;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.fasterxml.jackson.databind.exc.PropertyBindingException;

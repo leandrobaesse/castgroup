@@ -1,15 +1,15 @@
 package br.com.cast.avaliacao.exception;
 
-public class CidadeNaoEncontradaException extends EntidadeNaoEncontradaException {
+public class CategoriaNaoEncontradaException extends EntidadeNaoEncontradaException {
 
 	private static final long serialVersionUID = 1L;
 
-	public CidadeNaoEncontradaException(String mensagem) {
+	public CategoriaNaoEncontradaException(String mensagem) {
 		super(mensagem);
 	}
 	
-	public CidadeNaoEncontradaException(Long cidadeId) {
-		this(String.format("Não existe um cadastro de cidade com código %d", cidadeId));
+	public CategoriaNaoEncontradaException(Long categoriaId) {
+		this(String.format("Não existe uma categoria de curso com código %d", categoriaId));
 	}
 	
 }

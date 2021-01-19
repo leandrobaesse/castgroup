@@ -1,4 +1,4 @@
-package com.atenta.cadastro.visao.exceptionhandler;
+package br.com.cast.avaliacao.view.excepetionhandler;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

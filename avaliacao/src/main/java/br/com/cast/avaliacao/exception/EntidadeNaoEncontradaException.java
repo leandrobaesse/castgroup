@@ -1,4 +1,4 @@
-package com.algaworks.algafood.domain.exception;
+package br.com.cast.avaliacao.exception;
 
 public abstract class EntidadeNaoEncontradaException extends NegocioException {
 

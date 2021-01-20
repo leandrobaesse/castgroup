@@ -1,10 +1,12 @@
 package br.com.cast.avaliacao.model;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -23,10 +25,12 @@ public class Curso {
     private String descricao;
 
     @Column(nullable = false)
-    private Date dataInicio;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate dataInicio;
 
     @Column(nullable = false)
-    private Date dataFim;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate dataFim;
 
     @Column(nullable = true)
     private int qtdeAlunos;

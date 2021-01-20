@@ -1,8 +1,10 @@
 package br.com.cast.avaliacao.view.output;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Setter
@@ -13,9 +15,11 @@ public class CursoOutput {
 
     private String descricao;
 
-    private Date dataInicio;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate dataInicio;
 
-    private Date dataFim;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate dataFim;
 
     private CategoriaOutput categoria;
 

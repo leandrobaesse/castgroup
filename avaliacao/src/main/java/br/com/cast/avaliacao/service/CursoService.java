@@ -74,8 +74,8 @@ public class CursoService {
     private void podeCadastrarCurso(Curso curso) {
 
 
-        if (curso.getDataInicio().isEqual(LocalDate.now())) {
-            throw new NegocioException("Não é permitido o cadastro de curso com a data atual.");
+        if (curso.getDataInicio().isBefore(LocalDate.now())) {
+            throw new NegocioException("Não é permitido o cadastro de curso com início anterior à data atual.");
         }
 
         if (curso.getDataFim().isBefore(curso.getDataInicio())) {

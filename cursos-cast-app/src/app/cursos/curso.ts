@@ -2,6 +2,8 @@ import { CategoriaIdInput } from './categoriaIdInput';
 
 export class Curso{
 
+   id:number;
+
    descricao:string;
 
    dataInicio:Date;
@@ -11,5 +13,7 @@ export class Curso{
    qtdeAlunos:number;
 
    categoria:CategoriaIdInput;
+
+
 
 }

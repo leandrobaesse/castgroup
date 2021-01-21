@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Setter
 @Getter
@@ -15,10 +14,12 @@ public class CursoOutput {
 
     private String descricao;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    private int qtdeAlunos;
+
+    @JsonFormat(pattern = "yyyy-MM-dd" )
     private LocalDate dataInicio;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dataFim;
 
     private CategoriaOutput categoria;

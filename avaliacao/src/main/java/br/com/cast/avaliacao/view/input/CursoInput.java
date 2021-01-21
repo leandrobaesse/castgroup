@@ -6,27 +6,29 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
-import java.util.Date;
+
+
 
 @Setter
 @Getter
 @NoArgsConstructor
 public class CursoInput {
 
-    @NotNull
+    @NotEmpty(message = "O campo descrição é obrigatório.")
     private String descricao;
 
-    @NotNull
+    @NotNull(message = "O campo Data Início é obrigatório.")
     private LocalDate dataInicio;
 
-    @NotNull
+    @NotNull(message = "O campo Data Fim é obrigatório.")
     private LocalDate dataFim;
 
     private int qtdeAlunos;
 
-    @NotNull
+    @NotNull(message = "O campo Categoria é obrigatório.")
     @Valid
     private CategoriaIdInput categoria;
 

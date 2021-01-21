@@ -1,9 +1,26 @@
-<h1 class="mt4">Cursos Cadastrados</h1>
-<ol class="breadcrumb mb-4">
-    <li class="breadcrum-bitem active">Novo</li>
+
+
+
+
+<ol class="breadcrumb mb-4 " style="margin-top: 10px;">
+    <li class="breadcrum-bitem active">{{curso.id ? 'Edição Curso' : 'Cadastro Curso' }}</li>
 </ol>
 <div class="container">
     <form #form="ngForm" (submit)="onSubmit()">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="success == true">
+                    Curso salvo com sucesso !
+                </div>
+                <div class="alert alert-danger" role="alert" *ngFor="let erro of errors">
+                    {{erro.userMessage != null ? erro.userMessage : erro}}
+                </div>          
+            </div>
+        </div>
+
+
+
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
@@ -38,7 +55,7 @@
                     <label>Data Inicio:</label>
                         <input class="form-control"
                         [(ngModel)]="curso.dataInicio"
-                        type="date" name="descricao" id="inputDataInicio">
+                        type="date" name="dataInicio" id="inputDataInicio" placeholder=""  >
                 </div>
             </div>
 
@@ -47,7 +64,8 @@
                     <label>Data Fim:</label>
                         <input class="form-control"
                         [(ngModel)]="curso.dataFim"
-                        type="date" name="dataFim" id="inputDataFim">
+                        type="date" name="dataFim" id="inputDataFim" placeholder=""
+                        >
                 </div>
             </div>
 
@@ -63,8 +81,12 @@
 
         <div class="row">
             <div class="col-md-3">
-                <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>
+                <button type="submit" class="btn btn-success" *ngIf="!curso.id"><i class="fa fa-save"></i> Salvar</button>
+                <button type="submit" class="btn btn-primary" *ngIf="curso.id"><i class="fa fa-sync-alt"></i> Atualizar</button>             
+                <button type="button" class="btn btn-danger ml-1" (click) = "voltarParaListagem()"><i class="fa fa-arrow-alt-circle-left "></i> Voltar</button>
             </div>
+           
         </div>
+        
     </form>
 </div>

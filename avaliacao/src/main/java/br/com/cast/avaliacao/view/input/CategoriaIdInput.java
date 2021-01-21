@@ -11,6 +11,6 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public class CategoriaIdInput {
 
-    @NotNull
+    @NotNull(message = "O campo Categoria é obrigatório.")
     private Integer id;
 }

@@ -12,7 +12,6 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -39,15 +38,15 @@ public class CursoController {
     @GetMapping
     public List<CursoOutput> listarTodosCursos() {
 
-        List<Curso> cursos = cursoRepository.findAll();
+        List<Curso> cursos = cursoRepository.findAllByOrderByDataInicioAsc();
         return mapperUtil.mapList(cursos, CursoOutput.class);
     }
 
 
-    @GetMapping("/{cursoId}")
-    public CursoOutput buscarPorId(@PathVariable Long cursoId) {
+    @GetMapping("/{id}")
+    public CursoOutput buscarPorId(@PathVariable Long id) {
 
-        Curso curso = cursoService.buscar(cursoId);
+        Curso curso = cursoService.buscar(id);
 
         return mapperUtil.mapTo(curso, CursoOutput.class);
     }
